@@ -1,0 +1,6 @@
+pip install gtts
+from gtts import gTTS
+language="en"
+text="Good morning everyone ,today I learned a new things from python which is is know as gtts package.   It will help to convert text to speech format. You can also try this. Thank you!!!"
+speech=gTTS(text=text,lang=language,slow=False,tld="com.au")
+speech.save("texttoSpech.mp3")
