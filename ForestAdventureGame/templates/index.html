@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forest Adventure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🏆 Forest Adventure</h1>
+    <form action="/start" method="POST">
+        <label>Enter your name:</label><br>
+        <input type="text" name="name" required>
+        <button type="submit">Start Game</button>
+    </form>
+</body>
+</html>

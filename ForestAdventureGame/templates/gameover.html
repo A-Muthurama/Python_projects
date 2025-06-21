@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Over</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>☠️ Game Over</h1>
+    <p>{{ result }}</p>
+    <p>💰 Final Gold: {{ player.gold }}</p>
+    <a href="/">🔄 Play Again</a>
+</body>
+</html>

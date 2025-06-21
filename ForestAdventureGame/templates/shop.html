@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>🛒 Welcome to the Shop</h2>
+    <p>👤 <strong>{{ player['name'] }}</strong> | ❤️ {{ player['health'] }} | 💰 {{ player['gold'] }}</p>
+
+    {% if player['items'] %}
+        <p>🎒 Items: {{ player['items'] | join(', ') }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <button name="action" value="buy health potion">🧪 Buy Health Potion (20 Gold)</button>
+        <button name="action" value="buy sword">⚔️ Buy Sword (50 Gold)</button>
+        <button name="action" value="return">🚶 Return to Town</button>
+    </form>
+
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>

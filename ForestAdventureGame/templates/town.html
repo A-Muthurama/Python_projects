@@ -1,0 +1,21 @@
+<!-- templates/town.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Town</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🏠 Welcome to the Town, {{ player.name }}</h1>
+    <p>❤️ Health: {{ player.health }} | 💰 Gold: {{ player.gold }}</p>
+    <form method="POST">
+        <button name="action" value="shop">🛒 Go to Shop</button>
+        <button name="action" value="forest">🌲 Enter Forest</button>
+        <button name="action" value="rest">🛏️ Rest at Inn (10 Gold)</button>
+        <button name="action" value="quit">👋 Quit</button>
+    </form>
+    {% if result %}
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
